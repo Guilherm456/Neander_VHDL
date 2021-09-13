@@ -3,36 +3,36 @@ use ieee.std_logic_1164.all;
 
 entity ula is
     port(
-        barramento: inout std_logic_vector(7 downto 0);
-        ULA_op: in std_logic_vector(2 downto 0);
-        AC_rw,MEM_rw,rst,clk: in std_logic;
-        interface_flags: out std_logic_vector(1 downto 0)
+        barramento              : inout std_logic_vector(7 downto 0);
+        ULA_op                  : in std_logic_vector(2 downto 0);
+        AC_rw,MEM_rw,rst,clk    : in std_logic;
+        interface_flags         : out std_logic_vector(1 downto 0)
     );
 end entity;
 
 architecture ula_modulo of ula is
     component alu_mod is
     port(
-        a,b: in std_logic_vector(7 downto 0);
-        ula_op: in std_logic_vector(2 downto 0);
-        nz: out std_logic_vector(1 downto 0);
-        s: out std_logic_vector(7 downto 0)
+        a,b     : in std_logic_vector(7 downto 0);
+        ula_op  : in std_logic_vector(2 downto 0);
+        nz      : out std_logic_vector(1 downto 0);
+        s       : out std_logic_vector(7 downto 0)
     );
     end component;
 
     component reg_AC is
         port(
-            din : in std_logic_vector(7 downto 0);
-            nrw,cl,clk: in std_logic;
-            dout: out std_logic_vector(7 downto 0)
+            din         : in std_logic_vector(7 downto 0);
+            nrw,cl,clk  : in std_logic;
+            dout        : out std_logic_vector(7 downto 0)
         );
     end component;
 
     component reg_FLAGS is
         port(
-            din : in std_logic_vector(1 downto 0);
-            nrw,cl,clk: in std_logic;
-            dout: out std_logic_vector(1 downto 0)
+            din         : in std_logic_vector(1 downto 0);
+            nrw,cl,clk  : in std_logic;
+            dout        : out std_logic_vector(1 downto 0)
         );
     end component;
 
