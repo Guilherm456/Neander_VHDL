@@ -1,0 +1,78 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Tue Sep 14 17:55:45 2021
+[*]
+[dumpfile] "/home/guilherm456/Documents/SD/Neander/tb_neander.ghw"
+[dumpfile_mtime] "Tue Sep 14 17:38:37 2021"
+[dumpfile_size] 28502
+[savefile] "/home/guilherm456/Documents/SD/Neander/Neander.gtkw"
+[timestart] 0
+[size] 1600 849
+[pos] -1 -1
+*-27.597229 462000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_neander.
+[treeopen] top.tb_neander.u_neander.
+[treeopen] top.tb_neander.u_neander.ula_modulo.ac_reg.
+[treeopen] top.tb_neander.u_neander.ula_modulo.flags_reg.
+[sst_width] 289
+[signals_width] 279
+[sst_expanded] 1
+[sst_vpaned_height] 243
+@28
+top.tb_neander.sclk
+@24
+#{top.tb_neander.u_neander.uc_modulo.uc_comp.counter[2:0]} top.tb_neander.u_neander.uc_modulo.uc_comp.counter[2] top.tb_neander.u_neander.uc_modulo.uc_comp.counter[1] top.tb_neander.u_neander.uc_modulo.uc_comp.counter[0]
+#{top.tb_neander.u_neander.barramento[7:0]} top.tb_neander.u_neander.barramento[7] top.tb_neander.u_neander.barramento[6] top.tb_neander.u_neander.barramento[5] top.tb_neander.u_neander.barramento[4] top.tb_neander.u_neander.barramento[3] top.tb_neander.u_neander.barramento[2] top.tb_neander.u_neander.barramento[1] top.tb_neander.u_neander.barramento[0]
+@200
+-Barramento de controle
+@28
+#{top.tb_neander.u_neander.s_bctrl[10:0]} top.tb_neander.u_neander.s_bctrl[10] top.tb_neander.u_neander.s_bctrl[9] top.tb_neander.u_neander.s_bctrl[8] top.tb_neander.u_neander.s_bctrl[7] top.tb_neander.u_neander.s_bctrl[6] top.tb_neander.u_neander.s_bctrl[5] top.tb_neander.u_neander.s_bctrl[4] top.tb_neander.u_neander.s_bctrl[3] top.tb_neander.u_neander.s_bctrl[2] top.tb_neander.u_neander.s_bctrl[1] top.tb_neander.u_neander.s_bctrl[0]
+top.tb_neander.u_neander.mem_modulo.rem_nrw
+@29
+top.tb_neander.u_neander.mem_modulo.barrpc
+@200
+-RI
+@24
+#{top.tb_neander.u_neander.uc_modulo.ri_reg.datain[7:0]} top.tb_neander.u_neander.uc_modulo.ri_reg.datain[7] top.tb_neander.u_neander.uc_modulo.ri_reg.datain[6] top.tb_neander.u_neander.uc_modulo.ri_reg.datain[5] top.tb_neander.u_neander.uc_modulo.ri_reg.datain[4] top.tb_neander.u_neander.uc_modulo.ri_reg.datain[3] top.tb_neander.u_neander.uc_modulo.ri_reg.datain[2] top.tb_neander.u_neander.uc_modulo.ri_reg.datain[1] top.tb_neander.u_neander.uc_modulo.ri_reg.datain[0]
+#{top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[7:0]} top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[7] top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[6] top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[5] top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[4] top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[3] top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[2] top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[1] top.tb_neander.u_neander.uc_modulo.ri_reg.dataout[0]
+@200
+-PC
+@24
+#{top.tb_neander.u_neander.pc_modulo.pc_reg.datain[7:0]} top.tb_neander.u_neander.pc_modulo.pc_reg.datain[7] top.tb_neander.u_neander.pc_modulo.pc_reg.datain[6] top.tb_neander.u_neander.pc_modulo.pc_reg.datain[5] top.tb_neander.u_neander.pc_modulo.pc_reg.datain[4] top.tb_neander.u_neander.pc_modulo.pc_reg.datain[3] top.tb_neander.u_neander.pc_modulo.pc_reg.datain[2] top.tb_neander.u_neander.pc_modulo.pc_reg.datain[1] top.tb_neander.u_neander.pc_modulo.pc_reg.datain[0]
+#{top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[7:0]} top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[7] top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[6] top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[5] top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[4] top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[3] top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[2] top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[1] top.tb_neander.u_neander.pc_modulo.pc_reg.dataout[0]
+@200
+-AC
+@24
+#{top.tb_neander.u_neander.ula_modulo.ac_reg.datain[7:0]} top.tb_neander.u_neander.ula_modulo.ac_reg.datain[7] top.tb_neander.u_neander.ula_modulo.ac_reg.datain[6] top.tb_neander.u_neander.ula_modulo.ac_reg.datain[5] top.tb_neander.u_neander.ula_modulo.ac_reg.datain[4] top.tb_neander.u_neander.ula_modulo.ac_reg.datain[3] top.tb_neander.u_neander.ula_modulo.ac_reg.datain[2] top.tb_neander.u_neander.ula_modulo.ac_reg.datain[1] top.tb_neander.u_neander.ula_modulo.ac_reg.datain[0]
+#{top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[7:0]} top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[7] top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[6] top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[5] top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[4] top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[3] top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[2] top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[1] top.tb_neander.u_neander.ula_modulo.ac_reg.dataout[0]
+@200
+-Flags
+@24
+#{top.tb_neander.u_neander.ula_modulo.flags_reg.datain[1:0]} top.tb_neander.u_neander.ula_modulo.flags_reg.datain[1] top.tb_neander.u_neander.ula_modulo.flags_reg.datain[0]
+#{top.tb_neander.u_neander.ula_modulo.flags_reg.dataout[1:0]} top.tb_neander.u_neander.ula_modulo.flags_reg.dataout[1] top.tb_neander.u_neander.ula_modulo.flags_reg.dataout[0]
+@200
+-REM
+@24
+#{top.tb_neander.u_neander.mem_modulo.end_pc[7:0]} top.tb_neander.u_neander.mem_modulo.end_pc[7] top.tb_neander.u_neander.mem_modulo.end_pc[6] top.tb_neander.u_neander.mem_modulo.end_pc[5] top.tb_neander.u_neander.mem_modulo.end_pc[4] top.tb_neander.u_neander.mem_modulo.end_pc[3] top.tb_neander.u_neander.mem_modulo.end_pc[2] top.tb_neander.u_neander.mem_modulo.end_pc[1] top.tb_neander.u_neander.mem_modulo.end_pc[0]
+#{top.tb_neander.u_neander.mem_modulo.rem_reg.datain[7:0]} top.tb_neander.u_neander.mem_modulo.rem_reg.datain[7] top.tb_neander.u_neander.mem_modulo.rem_reg.datain[6] top.tb_neander.u_neander.mem_modulo.rem_reg.datain[5] top.tb_neander.u_neander.mem_modulo.rem_reg.datain[4] top.tb_neander.u_neander.mem_modulo.rem_reg.datain[3] top.tb_neander.u_neander.mem_modulo.rem_reg.datain[2] top.tb_neander.u_neander.mem_modulo.rem_reg.datain[1] top.tb_neander.u_neander.mem_modulo.rem_reg.datain[0]
+#{top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[7:0]} top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[7] top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[6] top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[5] top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[4] top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[3] top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[2] top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[1] top.tb_neander.u_neander.mem_modulo.rem_reg.dataout[0]
+@200
+-RDM
+@24
+#{top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[7:0]} top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[7] top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[6] top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[5] top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[4] top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[3] top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[2] top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[1] top.tb_neander.u_neander.mem_modulo.rdm_reg.datain[0]
+#{top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[7:0]} top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[7] top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[6] top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[5] top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[4] top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[3] top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[2] top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[1] top.tb_neander.u_neander.mem_modulo.rdm_reg.dataout[0]
+@200
+-MUX
+@22
+#{top.tb_neander.u_neander.mem_modulo.end_pc[7:0]} top.tb_neander.u_neander.mem_modulo.end_pc[7] top.tb_neander.u_neander.mem_modulo.end_pc[6] top.tb_neander.u_neander.mem_modulo.end_pc[5] top.tb_neander.u_neander.mem_modulo.end_pc[4] top.tb_neander.u_neander.mem_modulo.end_pc[3] top.tb_neander.u_neander.mem_modulo.end_pc[2] top.tb_neander.u_neander.mem_modulo.end_pc[1] top.tb_neander.u_neander.mem_modulo.end_pc[0]
+#{top.tb_neander.u_neander.mem_modulo.end_barr[7:0]} top.tb_neander.u_neander.mem_modulo.end_barr[7] top.tb_neander.u_neander.mem_modulo.end_barr[6] top.tb_neander.u_neander.mem_modulo.end_barr[5] top.tb_neander.u_neander.mem_modulo.end_barr[4] top.tb_neander.u_neander.mem_modulo.end_barr[3] top.tb_neander.u_neander.mem_modulo.end_barr[2] top.tb_neander.u_neander.mem_modulo.end_barr[1] top.tb_neander.u_neander.mem_modulo.end_barr[0]
+#{top.tb_neander.u_neander.mem_modulo.s_mux2rem[7:0]} top.tb_neander.u_neander.mem_modulo.s_mux2rem[7] top.tb_neander.u_neander.mem_modulo.s_mux2rem[6] top.tb_neander.u_neander.mem_modulo.s_mux2rem[5] top.tb_neander.u_neander.mem_modulo.s_mux2rem[4] top.tb_neander.u_neander.mem_modulo.s_mux2rem[3] top.tb_neander.u_neander.mem_modulo.s_mux2rem[2] top.tb_neander.u_neander.mem_modulo.s_mux2rem[1] top.tb_neander.u_neander.mem_modulo.s_mux2rem[0]
+@28
+top.tb_neander.u_neander.mem_modulo.barrpc
+@24
+#{top.tb_neander.u_neander.mem_modulo.ram.ram[130][7:0]} top.tb_neander.u_neander.mem_modulo.ram.ram[130][7] top.tb_neander.u_neander.mem_modulo.ram.ram[130][6] top.tb_neander.u_neander.mem_modulo.ram.ram[130][5] top.tb_neander.u_neander.mem_modulo.ram.ram[130][4] top.tb_neander.u_neander.mem_modulo.ram.ram[130][3] top.tb_neander.u_neander.mem_modulo.ram.ram[130][2] top.tb_neander.u_neander.mem_modulo.ram.ram[130][1] top.tb_neander.u_neander.mem_modulo.ram.ram[130][0]
+#{top.tb_neander.u_neander.mem_modulo.ram.ram[129][7:0]} top.tb_neander.u_neander.mem_modulo.ram.ram[129][7] top.tb_neander.u_neander.mem_modulo.ram.ram[129][6] top.tb_neander.u_neander.mem_modulo.ram.ram[129][5] top.tb_neander.u_neander.mem_modulo.ram.ram[129][4] top.tb_neander.u_neander.mem_modulo.ram.ram[129][3] top.tb_neander.u_neander.mem_modulo.ram.ram[129][2] top.tb_neander.u_neander.mem_modulo.ram.ram[129][1] top.tb_neander.u_neander.mem_modulo.ram.ram[129][0]
+#{top.tb_neander.u_neander.mem_modulo.ram.ram[128][7:0]} top.tb_neander.u_neander.mem_modulo.ram.ram[128][7] top.tb_neander.u_neander.mem_modulo.ram.ram[128][6] top.tb_neander.u_neander.mem_modulo.ram.ram[128][5] top.tb_neander.u_neander.mem_modulo.ram.ram[128][4] top.tb_neander.u_neander.mem_modulo.ram.ram[128][3] top.tb_neander.u_neander.mem_modulo.ram.ram[128][2] top.tb_neander.u_neander.mem_modulo.ram.ram[128][1] top.tb_neander.u_neander.mem_modulo.ram.ram[128][0]
+[pattern_trace] 1
+[pattern_trace] 0

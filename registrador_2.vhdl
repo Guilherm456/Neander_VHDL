@@ -1,15 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all; 
-
-entity reg_RDM is
+entity registrador_2 is
     port(
-        datain      : in std_logic_vector(7 downto 0);
+        datain      : in std_logic_vector(1 downto 0);
         nrw,cl,clk  : in std_logic;
-        dataout     : out std_logic_vector(7 downto 0)
+        dataout     : out std_logic_vector(1 downto 0)
     );
 end entity;
 
-architecture mem_modulo of reg_RDM is
+architecture registrador_comp of registrador_2 is
     component ffd is
         port(
             d      : in std_logic;
@@ -21,7 +20,7 @@ architecture mem_modulo of reg_RDM is
     end component;
 
 begin
-    reg : for i in 7 downto 0 generate
+    reg : for i in 1 downto 0 generate
         r : ffd port map(datain(i), nrw,clk, '1', cl, dataout(i));
     end generate reg;
 

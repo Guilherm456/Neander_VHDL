@@ -12,16 +12,8 @@ end entity;
 
 architecture mem_modulo of mem is
 
-    component reg_REM is
+    component registrador_8 is
         port(
-            endin           : in std_logic_vector(7 downto 0);
-            nrw, cl, clk    : in std_logic;
-            endout          : out std_logic_vector(7 downto 0)
-        );
-    end component;
-
-    component reg_RDM is
-        port(            
             datain      : in std_logic_vector(7 downto 0);
             nrw,cl,clk  : in std_logic;
             dataout     : out std_logic_vector(7 downto 0)
@@ -37,14 +29,15 @@ architecture mem_modulo of mem is
         );
     end component;
 
-    signal s_mux2rem, s_rem2mem, s_mem2rdm, s_rdm2barramento : std_logic_vector(7 downto 0);
+    signal s_mux2rem, s_mem2rdm, s_rdm2barramento : std_logic_vector(7 downto 0);
+    signal s_rem2mem                              : std_logic_vector(7 downto 0) := (others => '0');
 begin
 
     -- MUX (normal)
     s_mux2rem <= end_PC when barrPC='1' else end_barr;
     
     -- REM
-    regREM : reg_REM port map (s_mux2rem,REM_nrw,cl, clk, s_rem2mem);
+    REM_reg : registrador_8 port map (s_mux2rem,REM_nrw,cl, clk, s_rem2mem);
 
     -- MUX (especial)
     barramento <= s_rdm2barramento when MEM_nrw = '0' else (others => 'Z');
@@ -54,7 +47,7 @@ begin
     RAM : as_ram port map(s_rem2mem,s_mem2rdm, MEM_nrw, cl);
 
     -- RDM
-    RDM : reg_RDM port map(s_mem2rdm, RDM_nrw,cl, clk, s_rdm2barramento);
+    RDM_reg : registrador_8 port map(s_mem2rdm, RDM_nrw,cl, clk, s_rdm2barramento);
 
     
 end architecture mem_modulo;

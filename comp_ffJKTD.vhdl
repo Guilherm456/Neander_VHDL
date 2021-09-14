@@ -99,7 +99,8 @@ architecture latch of ffd is
 begin
 
     sd <= d when nrw='1' else sq;
-    u_td : ffjk port map(sd, nj, clk, pr, cl, q, nq);
-    nj <= not(d);
+    u_td : ffjk port map(sd, nj, clk, pr, cl, sq, nq);
+    nj <= not(sd);
 
+    q <= sq;
 end architecture;

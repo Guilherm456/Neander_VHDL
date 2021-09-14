@@ -1,13 +1,3 @@
-/PC_modulo.vhdl
-/comp_decode.vhdl
-/mod_controle.vhdl
-/*.Zone.Identifier
-/reg_FLAGS.vhdl
-/reg_PC.vhdl
-/reg_RI.vhdl
-/tb_alu.ghw
-/tb_decode.ghw
-/tb_decode.vhdl
-/tb_ula.ghw
+
 /work-obj93.cf
 /*.ghw
