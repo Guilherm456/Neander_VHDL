@@ -20,8 +20,7 @@ architecture registrador_comp of registrador_2 is
     end component;
 
 begin
-    reg : for i in 1 downto 0 generate
-        r : ffd port map(datain(i), nrw,clk, '1', cl, dataout(i));
-    end generate reg;
+    N : ffd port map(datain(1), nrw, clk, '1', cl , dataout(1));
+    Z : ffd port map(datain(0), nrw, clk, cl, '1', dataout(0));
 
 end architecture;
