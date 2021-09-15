@@ -21,6 +21,7 @@ architecture UC_comp of UC is
     
     signal snop,ssta,slda, sadd, sand, sor, snot, sjmp, sjn, sjz, shlt  : std_logic_vector(10 downto 0); 
     signal counter    : std_logic_vector(2 downto 0);
+    signal ssjn, ssjz : std_logic_vector(10 downto 0); --Signal auxiliar para o MUX deles
 begin
     -- Contador
     contador_comp : contador port map(clk, cl, counter);
@@ -42,6 +43,8 @@ begin
 
     ---- OPERACOES ----
 
+    -- nBarrINC (10), nBarrPC(9), ULA_OP( 8 downto 6), PC_nrw(5), AC_nrw(4), MEM_nrw (3), REM_nrw (2), RDM_nrw(1), RI_nrw(0)
+
     -- NOP
     snop(10) <= '1';
     snop(9)  <= '1';
@@ -61,7 +64,7 @@ begin
     ssta(4) <= '0';
     ssta(3) <= not counter(0) and counter(1) and counter(2);
     ssta(2) <= (not counter(1) and (counter(2) xnor counter(0))) or (counter(0) and counter(1) and not counter(2));
-    ssta(1) <= not counter(1) and (counter(1) xor counter(2));
+    ssta(1) <= not counter(1) and (counter(0) xor counter(2));
     ssta(0) <= not counter(0) and counter(1) and not counter(2);
 
     -- LDA
@@ -120,39 +123,39 @@ begin
     snot(0) <= not counter(0) and counter(1) and not counter(2);
 
     -- JMP
-    sjmp(10) <= not counter(1) or not counter(2) or not counter(0);
-    sjmp(9) <= counter(1) or not counter(2) or not counter(0);
+    sjmp(10) <= counter(1) or not counter(2) or not counter(0);
+    sjmp(9) <= '1';
     sjmp(8 downto 6) <= "000";
-    sjmp(5) <= (not counter(1) and counter(0) and not counter(2)) or (counter(0) and counter(2) and counter(1));
+    sjmp(5) <= not(counter(1)) and counter(0);
     sjmp(4) <= '0';
     sjmp(3) <= '0';
-    sjmp(2) <= (not counter(1) and (counter(2) XNOR counter(0))) or (counter(0) and counter(1) and not counter(2));
-    sjmp(1) <= (not counter(0) and counter(2)) or (not counter(1) and counter(0) and not counter(2));
-    sjmp(0) <= counter(1) and not counter(0) and not counter(2);
+    sjmp(2) <= (not(counter(0)) and not(counter(2)) and not(counter(1))) or (not(counter(2)) and counter(1) and counter(0));
+    sjmp(1) <= not(counter(1)) and (counter(0) xor counter(2));
+    sjmp(0) <= counter(1) and not(counter(2)) and not(counter(2));
 
     -- JN
-    sjn(10) <= '1';
-    sjn(9) <= '1';
-    sjn(8 downto 6) <= "000";
-    sjn(5) <= counter(0) and not counter(2);
-    sjn(4) <= '0';
-    sjn(3) <= '0';
-    sjn(2) <= not counter(0) and not counter(1) and not counter(2);
-    sjn(1) <= counter(0) and not counter(1) and not counter(2);
-    sjn(0) <= counter(1) and not counter(0) and not counter(2);
-    sjn <= sjmp when NZ(1)='1';
+    ssjn(10) <= '1';
+    ssjn(9) <= '1';
+    ssjn(8 downto 6) <= "000";
+    ssjn(5) <= counter(0) and not counter(2);
+    ssjn(4) <= '0';
+    ssjn(3) <= '0';
+    ssjn(2) <= not counter(0) and not counter(1) and not counter(2);
+    ssjn(1) <= counter(0) and not counter(1) and not counter(2);
+    ssjn(0) <= counter(1) and not counter(0) and not counter(2);
+    sjn <= sjmp when NZ(1)='1' else ssjn;
 
     -- JZ
-    sjz(10) <= '1';
-    sjz(9) <= '1';
-    sjz(8 downto 6) <= "000";
-    sjz(5) <= counter(0) and not counter(2);
-    sjz(4) <= '0';
-    sjz(3) <= '0';
-    sjz(2) <= not counter(0) and not counter(1) and not counter(2);
-    sjz(1) <= counter(0) and not counter(1) and not counter(2);
-    sjz(0) <= counter(1) and not counter(0) and not counter(2);
-    sjz <= sjmp when NZ(0)='1';
+    ssjz(10) <= '1';
+    ssjz(9) <= '1';
+    ssjz(8 downto 6) <= "000";
+    ssjz(5) <= counter(0) and not counter(2);
+    ssjz(4) <= '0';
+    ssjz(3) <= '0';
+    ssjz(2) <= not counter(0) and not counter(1) and not counter(2);
+    ssjz(1) <= counter(0) and not counter(1) and not counter(2);
+    ssjz(0) <= counter(1) and not counter(0) and not counter(2);
+    sjz <= sjmp when NZ(0)='1' else ssjz;
 
     -- HLT
     shlt(10) <= '0';

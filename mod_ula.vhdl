@@ -37,8 +37,8 @@ architecture ula_modulo of ula is
     end component;
 
 
-    signal s_ac2ula,s_ula2ac: std_logic_vector(7 downto 0);
-    signal s_ac2flags: std_logic_vector(1 downto 0);
+    signal s_ac2ula,s_ula2ac    : std_logic_vector(7 downto 0);
+    signal s_ac2flags           : std_logic_vector(1 downto 0);
 begin
 
     -- AC

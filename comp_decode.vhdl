@@ -23,5 +23,4 @@ begin
     instrOut(1) <= (((instrIn(7) and not instrIn(6)) and instrIn(5)) and not instrIn(4));
     instrOut(0) <= (((instrIn(7) and instrIn(6)) and instrIn(5)) and instrIn(4));
     
-    
 end architecture controle_modulo;
